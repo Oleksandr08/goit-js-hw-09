@@ -17,35 +17,26 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 
-body {
-  font-family: sans-serif;
-  padding: 20px;
-}
 
 .gallery {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 12px;
+    padding: 0;
+  }
 
-.gallery-item {
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+  .gallery-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
 
-.gallery-image {
-  width: 100%;
-  display: block;
-  transition: transform 0.3s;
-}
-
-.gallery-image:hover {
-  transform: scale(1.03);
-}
+  .gallery-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+  }
 .feedback-form {
   display: flex;
   flex-direction: column;
